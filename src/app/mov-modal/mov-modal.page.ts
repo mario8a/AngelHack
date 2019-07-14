@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-mov-modal',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovModalPage implements OnInit {
 
-  constructor() { }
+  constructor(private modalCtrl: ModalController) { }
 
   ngOnInit() {
+  }
+
+  salir() {
+    this.modalCtrl.dismiss();
   }
 
 }

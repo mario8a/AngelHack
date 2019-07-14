@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { TransModalPage } from '../trans-modal/trans-modal.page';
+import {MovModalPage} from '../mov-modal/mov-modal.page';
 
 @Component({
   selector: 'app-home',
@@ -58,6 +59,14 @@ export class HomePage {
   async abrirModal() {
     const modal = await this.modalController.create({
       component: TransModalPage
+    });
+    await modal.present();
+  }
+
+
+  async movModal() {
+    const modal = await this.modalController.create({
+      component: MovModalPage
     });
     await modal.present();
   }
