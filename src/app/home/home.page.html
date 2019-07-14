@@ -11,22 +11,20 @@
         <h1 class="credito">$215.00</h1>
     </div>
     <div class="ion-padding">
-        <ion-button expand="full" shape="round" color="tertiary">Transferencias</ion-button>
+        <ion-button mode="ios" expand="full" shape="round" color="tertiary">Movimientos</ion-button>
     </div>
 </ion-content>
 
 <ion-footer class="ion-padding">
     <div>
-        <ion-grid>
-            <ion-row>
-                <ion-col>
-                    <ion-icon name="happy"></ion-icon>
-                </ion-col>
-                <ion-col>
-                    <ion-icon name="cash"></ion-icon>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
+        <ion-slides pager="false" [options]="slidesOpts">
+            <ion-slide *ngFor="let slide of slides">
+                <div class="avatar" (click)="abrirModal()">
+                    <img [src]="slide.image">
+                    <p>{{slide.title}}</p>
+                </div>
+            </ion-slide>
+        </ion-slides>
     </div>
-    <ion-button id="fotButton" expand="full" color="primary">Agregar familia</ion-button>
+    <ion-button mode="ios" id="fotButton" expand="full" color="primary">Agregar familia</ion-button>
 </ion-footer>

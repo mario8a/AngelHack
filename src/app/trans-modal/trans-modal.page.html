@@ -1,0 +1,77 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Transaccion</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="animated zoomInDown" mode="ios">
+        <ion-row>
+            <!-- <ion-col size="6">
+                <div text-center>
+                    <qrcode [qrdata]="'Your QR code data string'" [size]="256" [level]="'M'"></qrcode>
+                </div>
+            </ion-col> -->
+            <ion-col size="12">
+                <ion-card-content>
+
+                    <h1>Págo De:</h1>
+                    <div *ngIf="createdCode">
+                        <a style="font-weight: bold; font-size: 32px; color:#616161;">${{ createdCode }}</a>
+                    </div>
+                </ion-card-content>
+            </ion-col>
+        </ion-row>
+        <ion-progress-bar type="indeterminate"></ion-progress-bar>
+    </ion-card>
+
+
+    <!-- <ion-button color="danger" (click)="salir()">Salir</ion-button> -->
+
+</ion-content>
+
+<!-- Teclado -->
+<ion-footer>
+    <ion-row>
+        <ion-col size="4">
+            <ion-button mode="ios" color="light" expand="block" (click)="oneButton()">1</ion-button>
+        </ion-col>
+        <ion-col size="4">
+            <ion-button mode="ios" color="light" expand="block" (click)="twoButton()">2</ion-button>
+        </ion-col>
+        <ion-col size="4">
+            <ion-button mode="ios" color="light" expand="block" (click)="threeButton()">3</ion-button>
+        </ion-col>
+        <ion-col size="4">
+            <ion-button mode="ios" color="light" expand="block" (click)="fourButton()">4</ion-button>
+        </ion-col>
+        <ion-col size="4">
+            <ion-button mode="ios" color="light" expand="block" (click)="fiveButton()">5</ion-button>
+        </ion-col>
+        <ion-col size="4">
+            <ion-button mode="ios" color="light" expand="block" (click)="sixButton()">6</ion-button>
+        </ion-col>
+        <ion-col size="4">
+            <ion-button mode="ios" color="light" expand="block" (click)="sevenButton()">7</ion-button>
+        </ion-col>
+        <ion-col size="4">
+            <ion-button mode="ios" color="light" expand="block" (click)="eightButton()">8</ion-button>
+        </ion-col>
+        <ion-col size="4">
+            <ion-button mode="ios" color="light" expand="block" (click)="nineButton()">9</ion-button>
+        </ion-col>
+        <ion-col size="4">
+            <ion-button mode="ios" color="secondary" expand="block" (click)="salir()">
+                <ion-icon name="exit"></ion-icon>
+            </ion-button>
+        </ion-col>
+        <ion-col size="4">
+            <ion-button mode="ios" color="light" expand="block" (click)="zeroButton()">0</ion-button>
+        </ion-col>
+        <ion-col size="4">
+            <ion-button mode="ios" color="danger" expand="block" (click)="cleanButton()">
+                <ion-icon name="close"></ion-icon>
+            </ion-button>
+        </ion-col>
+    </ion-row>
+</ion-footer>
